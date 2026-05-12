@@ -7,6 +7,7 @@ $database = "feedback_db";
 
 $conn = new mysqli($host, $user, $password, $database);
 
+echo "me"
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
