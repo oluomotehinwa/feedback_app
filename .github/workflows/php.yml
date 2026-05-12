@@ -29,3 +29,4 @@ jobs:
           port: 21
           server-dir: public_html/
           dangerous-clean-slate: false
+          timeout: 60000
