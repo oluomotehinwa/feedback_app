@@ -1,4 +1,4 @@
-name: PHP CI Pipeline
+name: PHP CI/CD Pipeline
 
 on:
   push:
@@ -6,13 +6,23 @@ on:
       - main
 
 jobs:
-  check-php:
+  build-and-deploy:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Check PHP Syntax
         run: |
           find . -name "*.php" -exec php -l {} \;
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: public_html/
