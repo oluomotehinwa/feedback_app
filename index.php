@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$host = "localhost";
+/*$host = "localhost";
 $user = "root";
 $password = "";
 $database = "feedback_db";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Handle form submission
-$message = "";
+$message = "";*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
