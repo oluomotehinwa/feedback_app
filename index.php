@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Handle form submission
-$message = "";*/
+$message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $message = "<div class='alert alert-warning'>Please fill all fields.</div>";
     }
-}
+}*/
 ?>
 
 <!DOCTYPE html>
