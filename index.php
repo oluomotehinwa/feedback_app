@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Handle form submission
-$message = "";
+$message = "";*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $message = "<div class='alert alert-warning'>Please fill all fields.</div>";
     }
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <h2 class="header-title">Course Feedback Form</h2>
 
-                    <?php echo $message; ?>
+                    <?php //echo $message; ?>
 
                     <form method="POST" action="">
 
@@ -142,5 +142,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </html>
 
 <?php
-$conn->close();
+//$conn->close();
 ?>
