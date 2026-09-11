@@ -7,14 +7,13 @@ on:
 
 jobs:
   check-php:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+
       - name: Check PHP Syntax
         run: |
-          find . -name "*.php" -exec php -l {} \;
+          find . -name "*.php" -type f -exec php -l {} \;
