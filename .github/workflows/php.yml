@@ -1,19 +1,23 @@
 name: PHP CI Pipeline
 
 on:
-  push:
-    branches:
-      - main
+push:
+branches:
+- main
 
 jobs:
-  check-php:
-    runs-on: ubuntu-latest
+check-php:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+```
+steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v4
 
-
-      - name: Check PHP Syntax
-        run: |
-          find . -name "*.php" -type f -exec php -l {} \;
+  - name: Check PHP Syntax
+    run: |
+      set -e
+      find . -name "*.php" -type f -print0 | while IFS= read -r -d '' file; do
+        php -l "$file"
+      done
+```
