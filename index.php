@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="card feedback-card">
                 <div class="card-body p-4">
 
-                    <h2 class="header-title">Feedback Form for MIT8107</h2>
+                    <h2 class="header-title">Feedback Form for MIT8329</h2>
 
                     <?php //echo $message; ?>
 
